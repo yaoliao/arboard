@@ -33,11 +33,14 @@ clipboard-win = "4.2"
 image = { version = "0.23.12", optional = true, default-features = false, features = ["bmp"] }
 
 [target.'cfg(target_os = "macos")'.dependencies]
+urlencoding = "2.1.0"
+log = "0.4"
+cocoa = "0.24.0"
 objc = "0.2"
 objc_id = "0.1"
 objc-foundation = "0.1"
 core-graphics = { version = "0.22", optional = true }
-image = { version = "0.23", optional = true, default-features = false, features = ["tiff"] }
+image = { version = "0.23", optional = true }
 
 [target.'cfg(all(unix, not(any(target_os="macos", target_os="android", target_os="emscripten"))))'.dependencies]
 log = "0.4"
