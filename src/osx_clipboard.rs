@@ -58,7 +58,7 @@ impl OSXClipboardContext {
 	}
 
 	#[cfg(feature = "image-data")]
-	pub(crate) fn get_image(&mut self) -> Result<ImageData, Error> {
+	pub(crate) fn get_image(&mut self) -> Result<ImageData<'static>, Error> {
 		let available_type = available_type_names();
 		info!("available_type : {:?}", available_type);
 
